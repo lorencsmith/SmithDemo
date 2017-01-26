@@ -10,7 +10,7 @@
         android:layout_height="50dp"
         android:gravity="center"
         android:hint="@string/app_name"
-        android:textSize="12sp"
+        android:textSize="30sp"
         android:layout_gravity="center"/>
 
 </LinearLayout>
