@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SmithDemo</string>
+    <string name="hint">SmithDemo</string>
+
 </resources>
