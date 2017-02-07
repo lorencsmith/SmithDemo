@@ -7,7 +7,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.example.lorensmith.smithdemo.ListViewActivity;
 import com.example.lorensmith.smithdemo.R;
+
+import java.util.ArrayList;
 
 /**
  * Created by Loren Smith on 1/25/2017.
@@ -17,24 +20,28 @@ public class ListViewAdapter extends BaseAdapter {
 
     private Context mContext;
     private final LayoutInflater mInflater;
+    private final ArrayList<String> listResult;
 
-    public ListViewAdapter(Context context){
+
+    public ListViewAdapter(Context context, ArrayList<String> listResult){
         this.mContext = context;
+        this.listResult = listResult;
         mInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
     @Override
     public int getCount() {
-        return 100;
+
+        return listResult.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return position;
     }
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 
     @Override
@@ -56,7 +63,7 @@ public class ListViewAdapter extends BaseAdapter {
         }
 
         holder.textView1.setText(String.valueOf(position));
-//        holder.textView2.setText(String.valueOf(position));
+        holder.textView2.setText(listResult.get(position));
         holder.textView3.setText(String.valueOf(position));
         if(position%2==0){
             holder.textView1.setVisibility(View.VISIBLE);
