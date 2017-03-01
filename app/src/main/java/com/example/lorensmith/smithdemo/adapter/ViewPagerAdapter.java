@@ -2,7 +2,9 @@ package com.example.lorensmith.smithdemo.adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListAdapter;
 
 import java.util.ArrayList;
 
@@ -10,7 +12,7 @@ import java.util.ArrayList;
  * Created by Loren Smith on 2/1/2017.
  */
 
-public class ViewPagerAdapter extends FragmentPagerAdapter{
+public class ViewPagerAdapter extends FragmentPagerAdapter implements ListAdapter {
 
     private ArrayList<Fragment> fragmentList;
 
@@ -26,6 +28,32 @@ public class ViewPagerAdapter extends FragmentPagerAdapter{
     public Fragment getItem(int position){
         return fragmentList.get(position);
     }
+
+    @Override
+    public boolean hasStableIds() {
+        return false;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        return null;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return 0;
+    }
+
+    @Override
+    public int getViewTypeCount() {
+        return 0;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return false;
+    }
+
     @Override
     public int getCount(){
         return fragmentList.size();
@@ -43,4 +71,13 @@ public class ViewPagerAdapter extends FragmentPagerAdapter{
         super.destroyItem(container, position, object);
     }
 
+    @Override
+    public boolean areAllItemsEnabled() {
+        return false;
+    }
+
+    @Override
+    public boolean isEnabled(int position) {
+        return false;
+    }
 }

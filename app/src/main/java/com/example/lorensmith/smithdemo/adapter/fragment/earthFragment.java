@@ -7,16 +7,18 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.example.lorensmith.smithdemo.R;
+
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ContentFragment.OnFragmentInteractionListener} interface
+ * {@link earthFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link ContentFragment#newInstance} factory method to
+ * Use the {@link earthFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ContentFragment extends Fragment {
+public class earthFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -26,7 +28,9 @@ public class ContentFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ContentFragment() {
+    private OnFragmentInteractionListener mListener;
+
+    public earthFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +40,11 @@ public class ContentFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ContentFragment.
+     * @return A new instance of fragment earthFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ContentFragment newInstance(String param1, String param2) {
-        ContentFragment fragment = new ContentFragment();
+    public static earthFragment newInstance(String param1, String param2) {
+        earthFragment fragment = new earthFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,12 +65,14 @@ public class ContentFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_content, container, false);
+        return inflater.inflate(R.layout.fragment_earth, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
-
+        if (mListener != null) {
+            mListener.onFragmentInteraction(uri);
+        }
     }
 
     @Override
@@ -77,7 +83,7 @@ public class ContentFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-
+        mListener = null;
     }
 
     /**
