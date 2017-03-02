@@ -35,14 +35,20 @@ public class MainActivity extends BaseActivity {
     }
     @OnClick(R.id.orange_button)
     public void orangeClick(){
-        Intent intent = new Intent(this, changeActivity.class);
+        Intent intent = new Intent(this, ActivityA.class);
         startActivity(intent);
     }
     @OnClick(R.id.main_timer)
     public void timeClick(){
-        Intent intent = new Intent(this, TimerActivity.class);
+        toActivity(TimerActivity.class);
+    }
+
+    @OnClick(R.id.main_animation)
+    public void toAnimation(){
+        Intent intent = new Intent(this, AnimationActivity.class);
         startActivity(intent);
     }
+
 
 
     @Override

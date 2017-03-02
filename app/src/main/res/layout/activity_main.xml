@@ -99,12 +99,22 @@
 
         <Button
             android:id="@+id/main_timer"
-            android:layout_width="100dp"
+            android:layout_width="120dp"
             android:layout_height="60dp"
             android:text="Timer"
             android:textAllCaps="false"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            />
+        <Button
+            android:id="@+id/main_animation"
+            android:layout_marginLeft="130dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="Animation"
+            android:textAllCaps="false"
+            android:textSize="20sp"
 
+            />
         </FrameLayout>
 
 </RelativeLayout>
