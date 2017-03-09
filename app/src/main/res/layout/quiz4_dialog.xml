@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quiz4"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="36sp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/white"
+        android:layout_marginTop="6dp"/>
+    <RadioGroup
+        android:id="@+id/quiz_rdg"
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+
+    <RadioButton
+        android:id="@+id/quiz_rb1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="left|center_vertical"
+        android:text="Dialog Activity"
+        android:textSize="18sp"/>
+
+
+    <RadioButton
+        android:id="@+id/quiz_rb2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="left|center_vertical"
+        android:text="ListView Activity"
+        android:textSize="18sp"/>
+    </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+    <Button
+        android:id="@+id/quiz_cancel"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textSize="24sp"/>
+    <Button
+        android:id="@+id/quiz_ok"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Ok"
+        android:textAllCaps="false"
+        android:textSize="24sp"/>
+    </LinearLayout>
+</LinearLayout>

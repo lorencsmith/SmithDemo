@@ -91,30 +91,63 @@
 
 
     <FrameLayout
+        android:id="@+id/main_fl"
         android:layout_below="@id/title_bar"
-        android:layout_above="@id/tool_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="60dp"
         android:background="@color/white">
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
         <Button
             android:id="@+id/main_timer"
-            android:layout_width="120dp"
+            android:onClick="onClick"
+            android:layout_width="0dp"
             android:layout_height="60dp"
+            android:layout_weight="1"
             android:text="Timer"
             android:textAllCaps="false"
             android:textSize="20sp"
             />
         <Button
             android:id="@+id/main_animation"
-            android:layout_marginLeft="130dp"
-            android:layout_width="120dp"
+            android:onClick="onClick"
+            android:layout_width="0dp"
             android:layout_height="60dp"
+            android:layout_weight="1"
             android:text="Animation"
             android:textAllCaps="false"
             android:textSize="20sp"
-
             />
+        <Button
+            android:id="@+id/main_animator"
+            android:onClick="onClick"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="Animator"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            />
+        </LinearLayout>
         </FrameLayout>
+    <FrameLayout
+        android:id="@+id/Quiz4_fl"
+        android:layout_below="@id/main_fl"
+        android:layout_above="@id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <Button
+            android:id="@+id/Quiz4"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:onClick="onClick"
+            android:text="Quiz4"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            />
+    </FrameLayout>
+
 
 </RelativeLayout>

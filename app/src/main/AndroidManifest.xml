@@ -21,12 +21,13 @@
         <activity android:name=".BaseActivity"></activity>
         <activity android:name=".DialogActivity"/>
         <activity android:name=".ListViewScroll"/>
-        <activity android:name=".ActivityA"/>
+        <activity  android:name=".ActivityA"/>
         <activity android:name=".ActivityB"/>
         <activity android:name=".ActivityC"/>
         <activity android:name=".ActivityD"/>
         <activity android:name=".TimerActivity"/>
         <activity android:name=".AnimationActivity"/>
+        <activity android:name=".AnimatorActivity"/>
         
     </application>
 
